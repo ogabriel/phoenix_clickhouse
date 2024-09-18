@@ -8,3 +8,10 @@ services:
       nofile:
         soft: 262144
         hard: 262144
+  clickhouse-ui:
+    image: ghcr.io/caioricciuti/ch-ui:latest
+    network_mode: host
+    environment:
+      VITE_CLICKHOUSE_URL: "http://localhost:8123"
+      VITE_CLICKHOUSE_USER: "default"
+      VITE_CLICKHOUSE_PASS: ""
