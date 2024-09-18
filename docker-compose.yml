@@ -1,0 +1,10 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server
+    network_mode: host
+    environment:
+      CLICKHOUSE_DB: "click"
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
