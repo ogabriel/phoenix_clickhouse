@@ -32,10 +32,9 @@ defmodule Click.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:ecto_ch, "~> 0.3.0"},
       {:phoenix, "~> 1.7.14"},
       {:phoenix_ecto, "~> 4.5"},
-      {:ecto_sql, "~> 3.10"},
-      {:postgrex, ">= 0.0.0"},
       {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},
       {:jason, "~> 1.2"},
