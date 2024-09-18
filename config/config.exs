@@ -11,6 +11,8 @@ config :click,
   ecto_repos: [Click.Repo],
   generators: [timestamp_type: :utc_datetime, binary_id: true]
 
+config :click, Click.Repo, url: "http://default:@localhost:8123/database"
+
 # Configures the endpoint
 config :click, ClickWeb.Endpoint,
   url: [host: "localhost"],
