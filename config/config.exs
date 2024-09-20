@@ -13,9 +13,10 @@ config :click,
 
 config :click, Click.Repo, url: "http://default:@localhost:8123/click"
 
-config :ecto_ch,
-  default_table_engine: "MergeTree",
-  default_table_options: [order_by: "tuple()"]
+# this bugs out every migration
+# config :ecto_ch,
+#   default_table_engine: "MergeTree",
+#   default_table_options: [order_by: "tuple()"]
 
 # Configures the endpoint
 config :click, ClickWeb.Endpoint,
