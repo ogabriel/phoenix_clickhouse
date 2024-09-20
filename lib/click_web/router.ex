@@ -7,5 +7,7 @@ defmodule ClickWeb.Router do
 
   scope "/api", ClickWeb do
     pipe_through :api
+
+    resources "/cars", CarController, except: [:new, :edit]
   end
 end
