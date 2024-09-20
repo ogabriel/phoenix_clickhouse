@@ -20,7 +20,7 @@ defmodule Click.Cars.Car do
     car
     |> cast(attrs, [
       :name,
-      :horsepower,
+      :horse_power,
       :weight,
       :drivetrain,
       :fuel_type,
@@ -31,7 +31,7 @@ defmodule Click.Cars.Car do
     ])
     |> validate_required([
       :name,
-      :horsepower,
+      :horse_power,
       :weight,
       :drivetrain,
       :fuel_type,
