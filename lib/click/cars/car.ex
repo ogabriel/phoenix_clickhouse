@@ -2,6 +2,8 @@ defmodule Click.Cars.Car do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @derive {Phoenix.Param, key: :name}
+  @primary_key false
   schema "cars" do
     field :name, :string
     field :brand, Ch, type: "LowCardinality(String)"
@@ -12,8 +14,6 @@ defmodule Click.Cars.Car do
     field :horse_power, Ch, type: "UInt16"
     field :weight, Ch, type: "UInt16"
     field :options, {:array, :string}
-    field :inserted_at, Ch, type: "DateTime"
-    field :updated_at, Ch, type: "DateTime"
   end
 
   def changeset(car, attrs) do
@@ -27,7 +27,8 @@ defmodule Click.Cars.Car do
       :body_style,
       :fuel_type,
       :brand,
-      :transmission
+      :transmission,
+      :options
     ])
     |> validate_required([
       :name,
