@@ -13,7 +13,7 @@ defmodule Click.Cars.Car do
     field :body_style, Ch, type: "LowCardinality(String)"
     field :horse_power, Ch, type: "UInt16"
     field :weight, Ch, type: "UInt16"
-    field :options, {:array, :string}
+    field :options, Ch, type: "Array(LowCardinality(String))"
   end
 
   def changeset(car, attrs) do

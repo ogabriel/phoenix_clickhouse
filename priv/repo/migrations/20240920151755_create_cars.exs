@@ -17,8 +17,9 @@ defmodule Click.Repo.Migrations.CreateCars do
 
       add :horse_power, :UInt16
       add :weight, :UInt16
+      add :foobar, :Float32
 
-      add :options, :"Array(String)"
+      add :options, :"Array(LowCardinality(String))"
     end
   end
 end
