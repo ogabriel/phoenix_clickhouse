@@ -8,7 +8,11 @@ defmodule ClickWeb.CarController do
 
   action_fallback ClickWeb.FallbackController
 
-  operation :index, false
+  operation :index,
+    summary: "List cars",
+    responses: [
+      ok: {"Car response", "application/json", [Car]}
+    ]
 
   def index(conn, _params) do
     cars = Cars.list_cars()
