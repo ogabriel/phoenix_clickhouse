@@ -33,6 +33,7 @@ defmodule Click.MixProject do
   defp deps do
     [
       {:ecto_ch, "~> 0.3.0"},
+      {:open_api_spex, "~> 3.21"},
       {:faker, "~> 0.18", only: [:test, :dev]},
       {:phoenix, "~> 1.7.14"},
       {:phoenix_ecto, "~> 4.5"},
